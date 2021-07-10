@@ -125,6 +125,7 @@ cabal.project.local~
 .ghc.environment.*
 
 ### Artem
+.idea/
 *~
 *.iml
 *.cabal
