@@ -52,5 +52,3 @@ tests:
       - transformers
       - hspec
       - hspec-discover
-      - tasty
-      - tasty-hunit
