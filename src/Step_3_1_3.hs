@@ -17,7 +17,7 @@ instance Monad (Except e) where
 except :: Either e a -> Except e a
 except = Except
 
--- region Task3
+-- region Task
 withExcept :: (e -> e') -> Except e a -> Except e' a
 withExcept f x = case runExcept x of
   Left s -> Except $ Left (f s)

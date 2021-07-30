@@ -5,7 +5,7 @@ import Control.Monad.Trans.Except
 data ReadError = EmptyInput | NoParse String
   deriving (Show, Eq)
 
--- region Task8
+-- region Task
 tryRead :: Read a => String -> Except ReadError a
 tryRead "" = throwE EmptyInput
 tryRead s = do
