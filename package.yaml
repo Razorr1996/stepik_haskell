@@ -22,6 +22,7 @@ description: Please see the README on GitHub at <https://github.com/razorr1996/s
 dependencies:
   - base >= 4.7 && < 5
   - transformers
+  - mtl
   - hspec
 
 library:
@@ -38,6 +39,7 @@ executables:
     dependencies:
       - Stepik-Haskell
       - transformers
+      - mtl
 
 tests:
   Stepik-Haskell-test:
@@ -50,5 +52,6 @@ tests:
     dependencies:
       - Stepik-Haskell
       - transformers
+      - mtl
       - hspec
       - hspec-discover
