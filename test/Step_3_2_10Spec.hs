@@ -14,7 +14,7 @@ addInts s1 s2 = do
   return $ i1 + i2
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "FailCont" $ do
     it "evalFailCont $ addInts \"15\" \"12\"" $
       do

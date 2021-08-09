@@ -5,7 +5,7 @@ import Step_3_3_5
 import Test.Hspec
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "separate" $ do
     it "(runWriter . runWriterT) $ separate (< 3) (> 7) [0..10]" $
       do

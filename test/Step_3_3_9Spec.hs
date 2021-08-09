@@ -18,7 +18,7 @@ strings :: [String]
 strings = ["abc", "defg", "hij"]
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "logFirstAndRetSecond" $ do
     it "runMyRWT logFirstAndRetSecond strings" $
       do

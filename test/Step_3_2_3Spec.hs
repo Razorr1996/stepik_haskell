@@ -4,7 +4,7 @@ import Step_3_2_3
 import Test.Hspec
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "CPS" $ do
     it "decode one as a number" $ do
       decode one as a number `shouldBe` (1 :: Integer)

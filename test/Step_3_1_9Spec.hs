@@ -6,7 +6,7 @@ import Step_3_1_9
 import Test.Hspec
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "trySum" $ do
     it "runExcept $ trySum [\"10\", \"20\", \"30\"]" $
       do

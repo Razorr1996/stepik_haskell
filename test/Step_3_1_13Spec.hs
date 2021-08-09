@@ -18,7 +18,7 @@ xs :: [Integer]
 xs = [1, 2, 3]
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "lie2se" $ do
     it "toSimple $ xs !!! 42" $
       do

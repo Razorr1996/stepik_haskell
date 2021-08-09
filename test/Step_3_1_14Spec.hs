@@ -7,7 +7,7 @@ import Step_3_1_9
 import Test.Hspec
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "Validate" $ do
     it "getValidate $ validateSum [\"10\", \"20\", \"30\"]" $
       do

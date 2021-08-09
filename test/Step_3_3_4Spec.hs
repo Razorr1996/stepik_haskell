@@ -11,7 +11,7 @@ strings :: [String]
 strings = ["abc", "defg", "hij"]
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "logFirstAndRetSecond" $ do
     it "runReader (runWriterT logFirstAndRetSecond) strings" $ do
       runReader (runWriterT logFirstAndRetSecond) strings `shouldBe` ("DEFG", "abc")

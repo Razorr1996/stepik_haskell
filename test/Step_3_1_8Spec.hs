@@ -5,7 +5,7 @@ import Step_3_1_8
 import Test.Hspec
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "tryRead" $ do
     it "runExcept (tryRead \"5\" :: Except ReadError Int)" $ do
       runExcept (tryRead "5" :: Except ReadError Int) `shouldBe` Right 5

@@ -8,7 +8,7 @@ import Test.Hspec
 (!!!!) xs n = runExcept $ xs !!! n
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   describe "!!!" $ do
     it "[1..100] !!! 5" $ do
       [1 .. 100] !!!! 5 `shouldBe` Right 6
