@@ -11,7 +11,7 @@ a3fl = Arr3T $ \e1 e2 e3 -> [(e2 +), (e3 +)]
 
 spec :: Spec
 spec = parallel $ do
-  describe "Arr2T & Arr3T" $ do
+  describe "Arr2T & Arr3T: Applicative" $ do
     it "getArr2T (a2fl <*> a2l) 2 10" $
       do
         getArr2T (a2fl <*> a2l) 2 10

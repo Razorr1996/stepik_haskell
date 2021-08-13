@@ -9,7 +9,7 @@ a3m = Arr3T $ \e1 e2 e3 -> Just (e1 + e2 + e3)
 
 spec :: Spec
 spec = parallel $ do
-  describe "Arr2T & Arr3T" $ do
+  describe "Arr2T & Arr3T: Monad" $ do
     it "getArr2T (do {x <- a2l; y <- a2l; return (x + y)}) 3 5" $
       do
         getArr2T (do x <- a2l; y <- a2l; return (x + y)) 3 5

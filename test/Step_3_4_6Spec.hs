@@ -9,7 +9,7 @@ a3e = Arr3T $ \e1 e2 e3 -> Right (e1 + e2 + e3)
 
 spec :: Spec
 spec = parallel $ do
-  describe "Arr2T & Arr3T" $ do
+  describe "Arr2T & Arr3T: Functor" $ do
     it "(getArr2T $ succ <$> a2l) 10 100" $
       do
         (getArr2T $ succ <$> a2l) 10 100
