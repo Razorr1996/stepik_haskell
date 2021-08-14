@@ -1,7 +1,7 @@
-module Step_3_5_7Spec where
+module Step_4_1_7Spec where
 
 import Control.Monad.Identity
-import Step_3_5_7
+import Step_4_1_7
 import Test.Hspec
 
 logTst :: LoggT Identity Integer

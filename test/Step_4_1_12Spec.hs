@@ -1,9 +1,9 @@
-module Step_3_5_12Spec where
+module Step_4_1_12Spec where
 
 import Control.Monad.State
-import Step_3_5_10
-import Step_3_5_12 ()
-import Step_3_5_7
+import Step_4_1_10
+import Step_4_1_12 ()
+import Step_4_1_7
 import Test.Hspec
 
 logSt :: LoggT (State Integer) Integer

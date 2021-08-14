@@ -1,4 +1,4 @@
-module Step_3_5_7 where
+module Step_4_1_7 where
 
 import Control.Applicative (liftA2)
 
