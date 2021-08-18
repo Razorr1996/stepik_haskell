@@ -14,7 +14,7 @@ logRdr = do
 spec :: Spec
 spec = parallel $ do
   describe "LoggT: MonadReader" $ do
-    it "runState (runLoggT logSt') 2" $
+    it "runReader (runLoggT logRdr) [(1, \"John\"), (2, \"Jane\")]" $
       do
         runReader (runLoggT logRdr) [(1, "John"), (2, "Jane")]
         `shouldBe` Logged "JaneJim" ()
