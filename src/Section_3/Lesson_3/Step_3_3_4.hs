@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -Wno-x-partial #-}
 module Section_3.Lesson_3.Step_3_3_4 where
 
 -- region Task
