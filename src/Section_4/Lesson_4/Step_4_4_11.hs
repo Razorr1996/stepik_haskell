@@ -6,9 +6,9 @@ module Section_4.Lesson_4.Step_4_4_11 where
 
 -- region Task
 -- code
-{-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE UndecidableInstances #-}
+--{-# LANGUAGE MultiParamTypeClasses #-}
+--{-# LANGUAGE FlexibleInstances #-}
+--{-# LANGUAGE UndecidableInstances #-}
 
 import Control.Applicative (liftA2)
 import Control.Monad.Reader

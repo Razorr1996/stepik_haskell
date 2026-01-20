@@ -1,5 +1,6 @@
 module Section_4.Lesson_5.Step_4_5_3 where
 
+import Data.Monoid
 import Section_4.Lesson_5.Step_4_5_2
 
 -- region Task

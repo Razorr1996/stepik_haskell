@@ -2,6 +2,7 @@ module Section_4.Lesson_2.Step_4_2_14 where
 
 import Control.Monad.State
 import Control.Monad.Writer
+import Data.Monoid
 
 data Tree a = Leaf a | Fork (Tree a) a (Tree a)
   deriving (Eq, Show)

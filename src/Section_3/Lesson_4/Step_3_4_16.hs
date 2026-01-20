@@ -5,7 +5,7 @@ import Control.Monad.Trans
 
 -- region Task
 -- code
-{-# LANGUAGE InstanceSigs #-}
+--{-# LANGUAGE InstanceSigs #-}
 
 newtype Arr2T e1 e2 m a = Arr2T {getArr2T :: e1 -> e2 -> m a}
 newtype Arr3T e1 e2 e3 m a = Arr3T {getArr3T :: e1 -> e2 -> e3 -> m a}

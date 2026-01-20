@@ -1,6 +1,7 @@
 module Section_4.Lesson_3.Step_4_3_6 where
 
 import qualified Control.Monad.Except as E
+import qualified Control.Monad.Trans.Class as C
 
 data Tile = Floor | Chasm | Snake
   deriving (Show)
@@ -27,8 +28,8 @@ moves g n p@(x, y) = E.runExceptT h
     h :: E.ExceptT DeathReason [] Point
     h = do
       _ <- E.liftEither $ tileResult g p
-      p' <- E.lift [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]
-      e <- E.lift $ moves g (n - 1) p'
+      p' <- C.lift [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]
+      e <- C.lift $ moves g (n - 1) p'
       E.liftEither e
 
 waysToDie :: DeathReason -> GameMap -> Int -> Point -> Int

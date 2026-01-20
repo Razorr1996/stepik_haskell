@@ -3,6 +3,7 @@ module Section_4.Lesson_3.Step_4_3_13 where
 import Control.Monad.Except
 import Control.Monad.Writer
 import Data.Foldable
+import Data.Monoid
 import Data.Traversable
 import Section_3.Lesson_1.Step_3_1_8 (ReadError (..))
 import Section_4.Lesson_3.Step_4_3_12
