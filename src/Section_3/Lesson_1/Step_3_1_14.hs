@@ -12,15 +12,19 @@ import Section_3.Lesson_1.Step_3_1_9
 newtype Validate e a = Validate {getValidate :: Either [e] a}
 
 instance Monoid a => Semigroup (Validate e a) where
-  (<>) = mappend
+  (Validate (Right r1)) <> (Validate (Right r2)) = Validate $ Right $ r1 <> r2
+  (Validate (Left e1)) <> (Validate (Left e2)) = Validate $ Left $ e1 ++ e2
+  (Validate (Left e1)) <> _ = Validate $ Left e1
+  _ <> (Validate (Left e2)) = Validate $ Left e2
+--  (<>) = mappend
 
 -- region Task
 instance Monoid a => Monoid (Validate e a) where
   mempty = Validate $ Right mempty
-  (Validate (Right r1)) `mappend` (Validate (Right r2)) = Validate $ Right $ r1 `mappend` r2
-  (Validate (Left e1)) `mappend` (Validate (Left e2)) = Validate $ Left $ e1 ++ e2
-  (Validate (Left e1)) `mappend` _ = Validate $ Left e1
-  _ `mappend` (Validate (Left e2)) = Validate $ Left e2
+--  (Validate (Right r1)) `mappend` (Validate (Right r2)) = Validate $ Right $ r1 `mappend` r2
+--  (Validate (Left e1)) `mappend` (Validate (Left e2)) = Validate $ Left $ e1 ++ e2
+--  (Validate (Left e1)) `mappend` _ = Validate $ Left e1
+--  _ `mappend` (Validate (Left e2)) = Validate $ Left e2
 
 instance Functor (Validate e) where
   fmap _ (Validate (Left e)) = Validate $ Left e

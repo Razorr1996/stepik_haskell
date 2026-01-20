@@ -11,11 +11,12 @@ instance Functor (FailCont r e) where
   fmap f m = FailCont $ \ok err -> runFailCont m (ok . f) err
 
 instance Applicative (FailCont r e) where
-  pure = return
+--  pure = return
+  pure x = FailCont $ \ok _ -> ok x
   (<*>) = ap
 
 instance Monad (FailCont r e) where
-  return x = FailCont $ \ok _ -> ok x
+--  return x = FailCont $ \ok _ -> ok x
   (FailCont m) >>= k = FailCont $ \ok err -> m (\a -> runFailCont (k a) ok err) err
 
 toFailCont :: Except e a -> FailCont r e a

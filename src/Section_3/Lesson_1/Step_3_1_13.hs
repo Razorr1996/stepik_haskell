@@ -6,12 +6,13 @@ newtype SimpleError = Simple {getSimple :: String}
   deriving (Eq, Show)
 
 instance Semigroup SimpleError where
-  (<>) = mappend
- 
+--  (<>) = mappend
+  (Simple e1) <> (Simple e2) = Simple $ e1 ++ e2
+
 -- region Task
 instance Monoid SimpleError where
   mempty = Simple ""
-  (Simple e1) `mappend` (Simple e2) = Simple $ e1 ++ e2
+--  (Simple e1) `mappend` (Simple e2) = Simple $ e1 ++ e2
 
 lie2se :: ListIndexError -> SimpleError
 lie2se ErrNegativeIndex = Simple "[negative index]"
